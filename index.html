@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Budget Tracker</title>
+</head>
+
+<body>
+    <h1>Money Tracker App</h1>
+    <div class="input-section">
+        <label for="category-select">Category</label>
+        <select id="category-select">
+            <option value="College Fee">Select</option>
+            <option value="College Fee">College Fee</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Food">Food</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Cool Drinks">Cool Drinks</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+    </div>
+    <div class="expenses-list">
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+
+            </tbody>
+            <tfoot>
+                <td>Total:</td>
+                <td id="total-amount"></td>
+                <td></td>
+                <td></td>
+            </tfoot>
+        </table>
+    </div>
+    <div class="pie-chart">
+        <h2>My Charts</h2>
+        <div class="main-container" id="main">
+            <div class="content-container" id="content">
+                Charts
+                <canvas class="my-chart" id="myChart"></canvas>
+            </div>
+            <div class="small-container" id="small">
+                <div class="inner-container" id="inner">
+                    <ul>
+                        <li>College fee: <span class="percentage">30%</span></li>
+                        <li>Rent: 70%</li>
+                        <li>Transport: 30%</li>
+                        <li>Food: 75%</li>
+                        <li>Shopping: 25%</li>
+                        <li>Cool Drinks: 100%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
