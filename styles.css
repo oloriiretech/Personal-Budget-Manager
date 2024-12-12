@@ -1,22 +1,35 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    background-color: rgba(0, 128, 0, 0.603);
+    padding: 5rem;
 }
 
-h1,
-h2 {
+h1 {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .input-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
+select {
+    border: none;
+    border-radius: 5rem;
+    padding: 0.3rem;
+    outline: 0;
+    width: 10%;
+}
 
-    }
+input {
+    border: none;
+    border-radius: 5rem;
+    outline: 0;
+    width: 10%;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 .input-section label {
@@ -31,16 +44,21 @@ h2 {
 }
 
 .input-section button {
-    padding: 5px 10px;
-    background-color: rgb(128, 38, 38);
-    color: white;
+    padding: 5px 5rem;
+    background-color: rgba(253, 7, 3);
+    color: black;
     border: none;
     border-radius: 4rem;
     cursor: pointer;
 }
 
+.input-section button:hover {
+    color: white;
+    background-color: rgb(199, 32, 32);
+}
+
 .expenses-list {
-    margin: 20px;
+    justify-self: center;
 }
 
 table {
@@ -57,17 +75,17 @@ td {
 
 th {
     background-color: blanchedalmond;
-    color: rgb(50, 50, 87);
+    color: rgb(30, 30, 114);
 }
 
 tfoot td {
     font-weight: bold;
-    color: blue;
+    color: rgb(30, 30, 114);
 }
 
 .delete-btn {
     padding: 5px 10px;
-    background-color: rgb(128, 38, 38);
+    background-color: rgba(253, 7, 3);
     color: white;
     border: none;
     border-radius: 4rem;
@@ -79,27 +97,95 @@ h2 {
     color: navy;
     text-transform: uppercase;
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
 }
 
 .content-container {
-    width: 500px
+    width: 500px;
+    color: white;
+    font-weight: 1000;
 }
 
 .main-container {
     font-family: sans-serif;
     display: flex;
-    align-items: center;
+    justify-self: center;
     gap: 24px;
     width: fit-content;
     box-shadow: 0 4px 12px -2px rgba(138, 31, 138, 0.911);
     border-radius: 20px;
     padding: 8px 32px;
+    background-color: rgba(5, 48, 5, 0.945);
 }
 
-@media (max-width : 768px) {
+ul li {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+
     .input-section {
-        max-width: 100%;
-        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-section button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .main-container {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .content-container {
+        width: 90%;
+    }
+
+    select,
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* For devices with screen width less than 480px (smaller mobile phones) */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .input-section {
+        padding: 5px;
+    }
+
+    .input-section button {
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    select,
+    input {
+        width: 100%;
     }
 }
